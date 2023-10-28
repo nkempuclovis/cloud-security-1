@@ -26,4 +26,4 @@ resource "aws_route53_record" "prod" {
     zone_id                = module.alb.lb_zone_id
     evaluate_target_health = true
   }
-} 
+}

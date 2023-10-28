@@ -75,7 +75,7 @@ module "alb" {
         matcher             = "200-399"
       }
       protocol_version = "HTTP1"
-     
+
       tags = {
         Name         = "${var.environment}-80-tg"
         Environment  = var.environment
