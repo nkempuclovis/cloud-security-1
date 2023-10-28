@@ -3,12 +3,9 @@
 ################################################################################
 
 module "vpc" {
-  source = "../../terraform-aws-modules/vpc"
-    # source  = "app.terraform.io/fojiglobal/modules//vpc"
-    # version = "1.0.1"
-  ##source = "git::https://example.com/vpc.git?ref=v1.2.0" 
-
-
+   source  = "app.terraform.io/fojiglobal/vpc/aws"
+   version = "1.0.0"
+  
   name = "${var.environment}-vpc"
   cidr = local.vpc_cidr
 

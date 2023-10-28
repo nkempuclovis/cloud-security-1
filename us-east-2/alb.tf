@@ -3,7 +3,9 @@
 ##################################################################
 
 module "alb" {
-  source = "../../terraform-aws-modules/alb"
+
+  source  = "app.terraform.io/fojiglobal/alb/aws"
+  version = "1.0.0"
 
   name               = "${var.environment}-lb"
   load_balancer_type = "application"

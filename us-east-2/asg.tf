@@ -3,7 +3,8 @@
 ################################################################################
 
 module "asg" {
-  source = "../../terraform-aws-modules/asg"
+   source  = "app.terraform.io/fojiglobal/asg/aws"
+   version = "1.0.0"
 
   ############### Autoscaling group ###############
 
