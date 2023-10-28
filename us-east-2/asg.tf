@@ -3,8 +3,8 @@
 ################################################################################
 
 module "asg" {
-   source  = "app.terraform.io/fojiglobal/asg/aws"
-   version = "1.0.0"
+  source  = "app.terraform.io/fojiglobal/asg/aws"
+  version = "1.0.0"
 
   ############### Autoscaling group ###############
 
@@ -30,10 +30,10 @@ module "asg" {
   launch_template_description = "Prod launch template"
   update_default_version      = true
 
-  image_id = data.aws_ami.ubuntu_20.id
-  instance_type = var.instance_type
-  key_name      = var.key_pair_use2
-  user_data = base64encode(file("user-data.sh"))
+  image_id          = data.aws_ami.ubuntu_20.id
+  instance_type     = var.instance_type
+  key_name          = var.key_pair_use2
+  user_data         = base64encode(file("user-data.sh"))
   enable_monitoring = true
 
   create_iam_instance_profile = false

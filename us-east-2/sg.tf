@@ -7,7 +7,8 @@
 #####################################################
 
 module "public_sg" {
-  source = "../../terraform-aws-modules/sg"
+  source  = "app.terraform.io/fojiglobal/sg/aws"
+  version = "1.0.0"
 
   name        = var.public_sg_name
   description = "Allows HTTP and HTTPS from Public"
@@ -95,7 +96,8 @@ module "public_sg" {
 ######################################################
 
 module "private_sg" {
-  source = "../../terraform-aws-modules/sg"
+  source  = "app.terraform.io/fojiglobal/sg/aws"
+  version = "1.0.0"
 
   name        = var.private_sg_name
   description = "Allow HTTP and HTTPS from Public"
@@ -176,7 +178,8 @@ module "private_sg" {
 ######################################################
 
 module "bastion_sg" {
-  source = "../../terraform-aws-modules/sg"
+  source  = "app.terraform.io/fojiglobal/sg/aws"
+  version = "1.0.0"
 
   name        = var.bastion_sg_name
   description = "Allow SSH traffic from Public"
