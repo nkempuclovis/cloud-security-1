@@ -50,7 +50,8 @@ module "alb" {
         }
       ]
       conditions = [{
-        host_headers = ["${var.environment}.fojilabs.com", "www.${var.environment}.fojilabs.com"]
+        #host_headers = ["${var.environment}.fojilabs.com", "www.${var.environment}.fojilabs.com"]
+        host_headers = ["www.${data.aws_route53_zone.fojilabs_zone.name}"]
       }]
     },
   ]
