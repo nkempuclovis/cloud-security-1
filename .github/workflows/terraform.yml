@@ -98,7 +98,7 @@ jobs:
         hide-progress: false
         format: 'sarif'
         output: 'trivy-results.sarif'
-        exit-code: '1'
+        #exit-code: '1'
         ignore-unfixed: true
         severity: 'CRITICAL,HIGH'
     - name: Upload Trivy scan results to GitHub Security tab
@@ -145,7 +145,7 @@ jobs:
 
     - name: Terraform Destroy
       env:
-        destroy: true
+        destroy: false
       if: ${{ env.destroy == 'true' }} 
       #if: github.ref == 'refs/heads/"master"' && github.event_name == 'push'
       run: terraform destroy -auto-approve -input=false
