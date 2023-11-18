@@ -15,7 +15,7 @@ module "alb" {
   # Attach security groups
   create_security_group = false
   security_groups       = [module.public_sg.security_group_id]
-  
+
 
   ################## HTTP to HTTPS Listener Redirection Rule ###############
 
