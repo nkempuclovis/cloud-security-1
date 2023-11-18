@@ -14,9 +14,9 @@ module "asg" {
 
   ignore_desired_capacity_changes = false
 
-  min_size                  = 2
-  max_size                  = 3
-  desired_capacity          = 3
+  min_size                  = 1
+  max_size                  = 2
+  desired_capacity          = 2
   wait_for_capacity_timeout = 0
   default_instance_warmup   = 300
   health_check_type         = "EC2"
